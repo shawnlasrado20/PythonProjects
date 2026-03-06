@@ -1,10 +1,9 @@
-# def add_print(a, b):
-#     print(a + b)
+import os
+from dotenv import load_dotenv
 
-# add_print(a=1, b=2)
+load_dotenv()
+# Read from environment
+api_key = os.environ.get('API_KEY')
+database = os.environ.get('DATABASE_NAME', 'default.db')
 
-def add_return(a, b):
-    return a + b
-
-add_return(a=1, b=2)
-
+print(f"Using database: {database}")
